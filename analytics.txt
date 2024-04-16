@@ -1,0 +1,17 @@
+重点关注的数据列
+从 owid-covid-data.csv 中：
+
+date：观察的日期。
+iso_code：国家的ISO代码，用于识别国家。
+total_deaths：累计死亡数。
+new_deaths：新增死亡数。
+hosp_patients：医院中的患者数。
+icu_patients：重症监护室中的患者数。
+hospital_beds_per_thousand：每千人拥有的医院床位数。
+population：国家的总人口。
+从 covid-hospitalization.csv 中：
+
+date：观察的日期。
+entity：国家名称。
+indicator：指标类型，如“Daily ICU occupancy”表示每日ICU使用情况。
+value：相应指标的值。
