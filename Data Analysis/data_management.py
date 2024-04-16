@@ -19,7 +19,7 @@ def data_manage(datapath):
     # covid_data['continent'] = covid_data['continent'].replace({'North America': 'NA', 'Europe': 'EU'})
 
     # create secondary variable
-    covid_data['mortality_rate'] = covid_data['total_deaths'] / covid_data['population']
+    covid_data['mortality_rate'] = (covid_data['total_deaths'] / covid_data['population']) * 1000
 
     # grouping variable
     covid_data['deaths_quartile'] = pd.qcut(covid_data['total_deaths'], 4, labels=False)
