@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 # 加载数据集
 datapath = '../dataset/clean_data/clean_merged_data.csv'
-savepath = '../dataset/image_data/'
+savepath = '../outputImg/death_data/'
 data = data_manage(datapath)
 data1 = data.copy()
 # 按日期降序排序
