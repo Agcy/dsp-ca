@@ -55,6 +55,7 @@ def plot_boxplot(data, variable):
 
 
 def plot_bar(data, variable1, variable2):
+    plt.figure(figsize=(15, 12))
     continent_total_deaths = data.groupby(variable1)[variable2].sum().reset_index()
     sns.barplot(data=continent_total_deaths, x=variable1, y=variable2)
     plt.title('Total Deaths by Continent')
@@ -76,7 +77,7 @@ if __name__ == "__main__":
     data = load_data(clean_data_path)
     describe_data(data)
 
-    plot_histogram(data, 'total_deaths')
+    plot_histogram(data, 'new_deaths')
     # plot_time_series_chart(data, 'total_deaths')
     plot_scatter(data, 'continent', 'total_deaths')
     plot_boxplot(data, 'total_deaths')

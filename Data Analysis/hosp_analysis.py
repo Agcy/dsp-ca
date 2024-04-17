@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 # 加载数据集
 datapath = '../dataset/clean_data/clean_merged_data.csv'
-savepath = '../dataset/death_data/'
+savepath = '../outputImg/hospital_data/'
 data = data_manage(datapath)
 data1 = data.copy()
 
@@ -33,6 +33,7 @@ plt.xlabel('Day')
 plt.ylabel('Number of Hospital Patients')
 plt.xticks(rotation=45)
 # 显示图形
+plt.savefig(savepath + 'hosp_patients_data_top_5.png')
 plt.show()
 
 
@@ -44,7 +45,7 @@ plt.title('Hospital Patients by Country bottom 5')
 plt.xlabel('Day')
 plt.ylabel('Number of Hospital Patients')
 plt.xticks(rotation=45)
-
+plt.savefig(savepath + 'hosp_patients_data_bottom_5.png')
 # 显示图形
 plt.show()
 
@@ -64,6 +65,7 @@ plt.title('Top 10 Countries by Hospital Beds per Thousand')
 plt.xlabel('entity')
 plt.ylabel('Hospital Beds per Thousand')
 plt.xticks(rotation=45)
+plt.savefig(savepath + 'hosp_beds_per_thousand_top_10.png')
 plt.show()
 
 # 设置图形大小
@@ -73,6 +75,7 @@ plt.title('Bottom 10 Countries by Hospital Beds per Thousand')
 plt.xlabel('entity')
 plt.ylabel('Hospital Beds per Thousand')
 plt.xticks(rotation=45)
+plt.savefig(savepath + 'hosp_beds_per_thousand_bottom_10.png')
 plt.show()
 
 
@@ -96,6 +99,7 @@ plt.title('ICU Patients by Country top 5')
 plt.xlabel('Day')
 plt.ylabel('Number of ICU Patients')
 plt.xticks(rotation=45)
+plt.savefig(savepath + 'icu_patients_data_top_5.png')
 plt.show()
 
 # 设置图形大小
@@ -105,6 +109,7 @@ plt.title('ICU Patients by Country bottom 5')
 plt.xlabel('Day')
 plt.ylabel('Number of ICU Patients')
 plt.xticks(rotation=45)
+plt.savefig(savepath + 'icu_patients_data_bottom_5.png')
 plt.show()
 
 '''
@@ -147,6 +152,7 @@ plt.title('ICU Occupancy per Million by Entity')
 plt.xlabel('Day')
 plt.ylabel('ICU Occupancy per Million')
 plt.xticks(rotation=45)
+plt.savefig(savepath + 'percent_patients_data_icu_stats.png')
 plt.show()
 
 # 设置图形大小
@@ -156,5 +162,6 @@ plt.title('Hospital Occupancy per Million by Entity')
 plt.xlabel('Day')
 plt.ylabel('Hospital Occupancy per Million')
 plt.xticks(rotation=45)
+plt.savefig(savepath + 'percent_patients_data_hospital_stats.png')
 plt.show()
 

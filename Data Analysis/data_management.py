@@ -11,9 +11,17 @@ def data_manage(datapath):
 
     # counting classified variable frequency
     # print(covid_data.columns)
+
+    print("Number of entries present on each continent")
     print(covid_data['continent'].value_counts())
+    print("Number of entries corresponding to each type of indicator")
     print(covid_data['indicator'].value_counts())
+    print("Number of null values in each column")
     print(covid_data.isnull().sum())
+    print("Names of participating countries in each continent")
+    print(covid_data.groupby('continent')['entity'].nunique())
+    print("Name of all countries participating in the statistical analysis")
+    print(list(covid_data['entity'].unique()))
 
     # number the classified variable
     # covid_data['continent'] = covid_data['continent'].replace({'North America': 'NA', 'Europe': 'EU'})
