@@ -32,6 +32,8 @@ def data_manage(datapath):
     # grouping variable
     covid_data['deaths_quartile'] = pd.qcut(covid_data['total_deaths'], 4, labels=False)
 
+    covid_data['mortality_quartile'] = pd.qcut(covid_data['mortality_rate'], 2, labels=False)
+
     print(covid_data.columns)
 
     return covid_data

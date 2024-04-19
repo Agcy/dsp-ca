@@ -5,7 +5,7 @@ def load_data(hosp_data_path, death_data_path):
     """加载数据并进行初步清洁"""
     hosp_cols = ['entity', 'date', 'iso_code', 'indicator', 'value']
     death_cols = ['date', 'iso_code', 'continent', 'total_deaths', 'new_deaths', 'hosp_patients',
-                  'icu_patients', 'hospital_beds_per_thousand', 'population']
+                  'icu_patients', 'hospital_beds_per_thousand', 'population', 'population_density']
     hosp_data = pd.read_csv(hosp_data_path, usecols=hosp_cols)
     death_data = pd.read_csv(death_data_path, usecols=death_cols)
     merged_data = pd.merge(hosp_data, death_data, on=['date', 'iso_code'], how='inner')
